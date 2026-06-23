@@ -1,0 +1,1019 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f3f4f6;
+}
+
+/* Layout */
+
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #0f172a, #111827);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.nav-item {
+    display: block;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-item.active {
+    background: #2563eb;
+    color: white;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.nav-item-logout {
+    margin-bottom: 0;
+    background: rgba(239, 68, 68, 0.12);
+    color: #fecaca;
+    border: 1px solid rgba(248, 113, 113, 0.22);
+}
+
+.nav-item-logout:hover {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ffffff;
+}
+
+/* Main */
+
+.main-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Topbar */
+.topbar {
+    background: white;
+    padding: 15px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.topbar-left {
+    justify-self: start;
+}
+
+.topbar-center {
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 60%;
+    max-width: 420px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+}
+
+.topbar-right {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification-bell {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.topbar {
+    background: white;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    margin-right: 20px;
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: #6366f1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.admin-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+/* Content */
+
+.content-area {
+    padding: 30px;
+}
+
+/* Stats */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.stat-info p {
+    font-size: 13px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.stat-info h2 {
+    margin: 8px 0 0 0;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* Colors */
+
+.stat-card.blue {
+    border-color: #3b82f6;
+}
+.stat-card.blue .stat-icon {
+    background: #eff6ff;
+}
+
+.stat-card.purple {
+    border-color: #8b5cf6;
+}
+.stat-card.purple .stat-icon {
+    background: #f3e8ff;
+}
+
+.stat-card.green {
+    border-color: #22c55e;
+}
+.stat-card.green .stat-icon {
+    background: #ecfdf5;
+}
+
+.stat-card.orange {
+    border-color: #f97316;
+}
+.stat-card.orange .stat-icon {
+    background: #fff7ed;
+}
+
+
+/* Table */
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+
+
+.card-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.data-table thead {
+    background: #fafafa;
+}
+
+
+.data-table th {
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6b7280;
+}
+
+.data-table td {
+    padding: 18px 20px;
+    font-size: 14px;
+}
+
+.rank-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.rank-circle.gold {
+    background: #fef3c7;
+    color: #b45309;
+}
+.rank-circle.silver {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.rank-circle.bronze {
+    background: #fde68a;
+    color: #92400e;
+}
+
+.table-wrapper {
+    padding: 0 20px 20px 20px;
+}
+
+
+.data-table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* Badge */
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge.car {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.badge.bike {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+
+/* Progress */
+
+.progress {
+    height: 5px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    margin-bottom: 6px;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+.progress-bar {
+    height: 100%;
+    background: #22c55e;
+    border-radius: 10px;
+}
+
+/*vehicles.php*/
+
+/* =========================
+   TABS
+========================= */
+
+.tabs-header {
+    display: flex;
+    gap: 20px;
+    padding: 20px 24px 0 24px;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    cursor: pointer;
+    color: #6b7280;
+}
+
+.tab-btn.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* =========================
+   FILTER BAR
+========================= */
+
+.filter-bar {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 20px 24px;
+    margin: 0;        /* add this */
+}
+
+.filter-bar form {
+    margin: 0;
+}
+
+
+.filter-input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    width: 200px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* =========================
+   TABLE IMAGE
+========================= */
+
+.vehicle-thumb {
+    width: 50px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.action-btn {
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.action-btn.edit {
+    color: #2563eb;
+}
+
+.action-btn.delete {
+    color: #dc2626;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 24px 24px 24px;
+    gap: 8px;
+}
+
+.page-btn {
+    border: 1px solid #e5e7eb;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.page-btn.active {
+    background: #2563eb;
+    color: white;
+}
+/*add-vehicle.php*/
+
+.form-row {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.form-row input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+}
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-container {
+    width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.modal-close {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* =========================
+   FORM GRID
+========================= */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 24px;
+}
+
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.image-grid input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+/* ===============================
+   ADD VEHICLE FORM
+================================ */
+
+.vehicle-admin-container{
+max-width:1000px;
+margin:0 auto;
+display:flex;
+flex-direction:column;
+gap:24px;
+}
+
+/* section cards */
+
+.vehicle-admin-card{
+background:#ffffff;
+border:1px solid #e5e7eb;
+border-radius:12px;
+padding:24px;
+}
+
+/* section titles */
+
+.vehicle-admin-card h3{
+font-size:14px;
+font-weight:600;
+margin-bottom:18px;
+color:#111827;
+}
+
+/* 2 column grid */
+
+.vehicle-admin-grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+/* 3 column grid */
+
+.vehicle-admin-grid-3{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:20px;
+}
+
+/* full width field */
+
+.vehicle-admin-full{
+grid-column:1 / -1;
+}
+
+/* form field */
+
+.vehicle-admin-field{
+display:flex;
+flex-direction:column;
+}
+
+/* label */
+
+.vehicle-admin-field label{
+font-size:12px;
+font-weight:600;
+margin-bottom:6px;
+color:#374151;
+}
+
+/* inputs */
+
+.vehicle-admin-field input,
+.vehicle-admin-field select{
+height:40px;
+padding:0 12px;
+border:1px solid #e5e7eb;
+border-radius:6px;
+background:#f9fafb;
+font-size:14px;
+transition:all .15s ease;
+}
+
+/* focus */
+
+.vehicle-admin-field input:focus,
+.vehicle-admin-field select:focus{
+outline:none;
+border-color:#2563eb;
+background:#ffffff;
+box-shadow:0 0 0 2px rgba(37,99,235,0.1);
+}
+
+
+/*vehicles.php delete button*/
+
+.action-buttons a{
+font-size:16px;
+margin-right:8px;
+text-decoration:none;
+}
+
+.edit-btn{
+color:#2563EB;
+}
+
+.delete-btn{
+color:#EF4444;
+}
+/* ===============================
+   VEHICLE ADMIN CARD
+================================ */
+
+.vehicle-admin-card{
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:10px;
+padding:22px;
+margin-bottom:22px;
+box-shadow:0 2px 6px rgba(0,0,0,0.04);
+}
+
+
+/* ===============================
+   CARD TITLE
+================================ */
+
+.vehicle-admin-card h3{
+font-size:15px;
+font-weight:600;
+margin-bottom:18px;
+color:#111827;
+}
+
+
+/* ===============================
+   GRID LAYOUT
+================================ */
+
+.vehicle-admin-card{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px 22px;
+}
+
+
+/* ===============================
+   LABEL
+================================ */
+
+.vehicle-admin-card label{
+font-size:12px;
+font-weight:600;
+color:#374151;
+margin-bottom:4px;
+display:block;
+}
+
+
+/* ===============================
+   INPUTS
+================================ */
+
+.vehicle-admin-card input,
+.vehicle-admin-card textarea{
+width:100%;
+height:40px;
+padding:0 12px;
+border:1px solid #e5e7eb;
+border-radius:6px;
+background:#f9fafb;
+font-size:14px;
+outline:none;
+transition:all .2s ease;
+}
+
+
+/* TEXTAREA */
+
+.vehicle-admin-card textarea{
+height:90px;
+padding:10px 12px;
+resize:vertical;
+}
+
+
+/* ===============================
+   INPUT FOCUS
+================================ */
+
+.vehicle-admin-card input:focus,
+.vehicle-admin-card textarea:focus{
+border-color:#2563eb;
+background:#fff;
+box-shadow:0 0 0 2px rgba(37,99,235,0.08);
+}
+
+
+/* ===============================
+   SMALL SCREENS
+================================ */
+
+@media(max-width:900px){
+
+.vehicle-admin-card{
+grid-template-columns:1fr;
+}
+
+}
+
+/*users.php*/
+
+.type-tag.user{
+background:#DBEAFE;
+color:#2563EB;
+}
+
+.type-tag.admin{
+background:#FECACA;
+color:#991B1B;
+}
+
+/*settings.php*/
+
+/* =========================
+   SETTINGS PAGE
+========================= */
+
+.card{
+background:white;
+border-radius:14px;
+padding:28px;
+margin-bottom:25px;
+box-shadow:0 8px 25px rgba(0,0,0,0.06);
+transition:all 0.25s ease;
+}
+
+.card:hover{
+transform:translateY(-3px);
+box-shadow:0 14px 35px rgba(0,0,0,0.08);
+}
+
+.card h3{
+font-size:18px;
+font-weight:600;
+margin-bottom:22px;
+color:#111827;
+border-bottom:1px solid #eee;
+padding-bottom:10px;
+}
+
+
+
+/* =========================
+   GRID LAYOUT
+========================= */
+
+.vehicle-admin-grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.vehicle-admin-field{
+display:flex;
+flex-direction:column;
+}
+
+
+
+/* =========================
+   LABELS
+========================= */
+
+.vehicle-admin-field label{
+font-size:13px;
+font-weight:500;
+color:#6b7280;
+margin-bottom:6px;
+text-transform:capitalize;
+}
+
+
+
+/* =========================
+   INPUT FIELDS
+========================= */
+
+.vehicle-admin-field input,
+.vehicle-admin-field textarea,
+.vehicle-admin-field select{
+
+width:100%;
+padding:10px 12px;
+
+border-radius:8px;
+border:1px solid #e5e7eb;
+
+font-size:14px;
+background:#fafafa;
+
+transition:all 0.2s ease;
+
+}
+
+.vehicle-admin-field textarea{
+resize:vertical;
+min-height:80px;
+}
+
+
+
+/* INPUT FOCUS */
+
+.vehicle-admin-field input:focus,
+.vehicle-admin-field textarea:focus,
+.vehicle-admin-field select:focus{
+
+outline:none;
+border-color:#2563eb;
+background:white;
+
+box-shadow:0 0 0 3px rgba(37,99,235,0.1);
+
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary{
+
+background:#2563eb;
+color:white;
+
+padding:10px 18px;
+
+border:none;
+border-radius:8px;
+
+font-size:14px;
+font-weight:500;
+
+cursor:pointer;
+
+transition:all 0.2s ease;
+
+}
+
+.btn-primary:hover{
+
+background:#1d4ed8;
+transform:translateY(-1px);
+
+}
+
+
+
+/* =========================
+   DANGER BUTTON
+========================= */
+
+.btn-danger{
+
+background:#ef4444;
+color:white;
+
+padding:10px 18px;
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:all 0.2s ease;
+
+}
+
+.btn-danger:hover{
+
+background:#dc2626;
+transform:translateY(-1px);
+
+}
+
+
+
+/* =========================
+   SUCCESS ALERT
+========================= */
+
+.alert-success{
+
+background:#ecfdf5;
+border:1px solid #10b981;
+
+color:#065f46;
+
+padding:12px 16px;
+
+border-radius:8px;
+
+font-size:14px;
+margin-bottom:20px;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.vehicle-admin-grid-2{
+grid-template-columns:1fr;
+}
+
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 10px;
+
+    background: #1e293b;
+    color: #e5e7eb;
+
+    border: 1px solid #334155;
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+/* HOVER */
+.btn-secondary:hover {
+    background: #334155;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ACTIVE CLICK */
+.btn-secondary:active {
+    transform: scale(0.97);
+    box-shadow: none;
+}

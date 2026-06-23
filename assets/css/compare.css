@@ -1,0 +1,415 @@
+/* NAVBAR */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 40px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 20px;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* RIGHT */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #111827; /* black */
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.nav-link.active {
+  color: #2563eb;
+}
+
+
+/* LOGIN BUTTON */
+.login-btn {
+  background: #2563eb;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 8px;
+
+}
+
+ 
+.nav-link.login-btn:hover {
+  opacity: 0.4;
+}
+
+.nav-link.login-btn:active {
+  opacity: 0.2;
+}
+/* ===============================
+   VEHICLE GRID
+================================ */
+
+.vehicle-grid{
+display:grid;
+grid-template-columns:repeat(auto-fill, minmax(350px,1fr));
+gap:28px;
+margin-top:30px;
+}
+
+
+/* ===============================
+   VEHICLE CARD
+================================ */
+
+.vehicle-card{
+width:100%;
+background:#ffffff;
+border-radius:16px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:transform 0.25s ease, box-shadow 0.25s ease;
+cursor:pointer;
+}
+
+.vehicle-card:hover{
+transform:translateY(-6px);
+box-shadow:0 18px 40px rgba(0,0,0,0.12);
+}
+
+
+/* ===============================
+   VEHICLE IMAGE
+================================ */
+
+.vehicle-card img{
+width:100%;
+height:200px;
+object-fit:cover;
+display:block;
+}
+
+
+/* ===============================
+   VEHICLE INFO
+================================ */
+
+.vehicle-card h3{
+font-size:18px;
+font-weight:600;
+margin:16px 16px 6px;
+color:#222;
+}
+
+.vehicle-card p{
+font-size:14px;
+color:#666;
+margin:0 16px 18px;
+}
+
+
+/* ===============================
+   REMOVE LINK STYLE
+================================ */
+
+.vehicle-card a{
+text-decoration:none;
+color:inherit;
+display:block;
+}
+
+.compare-page{
+max-width:1200px;
+margin:40px auto;
+padding:20px;
+font-family:Inter,system-ui;
+}
+
+.compare-title{
+text-align:center;
+font-size:32px;
+font-weight:700;
+margin-bottom:5px;
+}
+
+.compare-sub{
+text-align:center;
+color:#6b7280;
+margin-bottom:40px;
+}
+
+.compare-cards{
+display:flex;
+gap:25px;
+justify-content:center;
+margin-bottom:40px;
+flex-wrap:wrap;
+}
+
+.compare-card{
+background:#fff;
+border-radius:16px;
+padding:20px;
+width:300px;
+text-align:center;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+transition:0.2s;
+}
+
+.compare-card.best{
+border:2px solid #16a34a;
+}
+
+.compare-card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:10px;
+margin:10px 0;
+}
+
+.compare-card h3{
+font-size:18px;
+margin-bottom:5px;
+}
+
+.compare-card p{
+color:#6b7280;
+font-size:14px;
+}
+
+.compat-score{
+margin-top:15px;
+}
+
+.circle{
+width:90px;
+height:90px;
+border-radius:50%;
+border:6px solid #16a34a;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:700;
+font-size:20px;
+margin:10px auto;
+color:#111;
+}
+.compare-image{
+width:100%;
+height:180px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.compare-option{
+display:block;
+padding:12px;
+background:#f3f4f6;
+margin:8px;
+border-radius:8px;
+text-decoration:none;
+color:#333;
+}
+
+.compatibility-section{
+background:#fff;
+padding:25px;
+border-radius:16px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+margin-bottom:40px;
+}
+
+.compat-row{
+display:flex;
+align-items:center;
+gap:15px;
+margin:18px 0;
+}
+
+.compat-row span{
+width:160px;
+font-size:14px;
+}
+
+.bar{
+flex:1;
+height:8px;
+background:#e5e7eb;
+border-radius:6px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+border-radius:6px;
+}
+
+.fill.green{
+background:#16a34a;
+}
+
+.fill.blue{
+background:#2563eb;
+}
+.fill.purple{
+background:#8b5cf6;
+}
+
+.radar-section{
+background:#fff;
+padding:30px;
+border-radius:16px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+margin-bottom:40px;
+text-align:center;
+}
+
+#compareRadar{
+max-width:450px;
+margin:auto;
+}
+
+.attribute-section{
+background:#fff;
+padding:25px;
+border-radius:16px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+margin-bottom:40px;
+}
+
+.attribute-row{
+margin-bottom:22px;
+}
+
+.attr-label{
+font-weight:600;
+margin-bottom:8px;
+}
+
+.attr-bars{
+display:flex;
+gap:20px;
+}
+
+.attr-item{
+flex:1;
+}
+
+.attr-bar-bg{
+background:#e5e7eb;
+height:8px;
+border-radius:6px;
+overflow:hidden;
+margin:5px 0;
+}
+
+.attr-bar{
+height:100%;
+}
+
+.attr-bar.red{
+background:#ef4444;
+}
+
+.attr-bar.blue{
+background:#3b82f6;
+}
+
+.attr-bar.green{
+background:#22c55e;
+}
+.attr-bar.purple{
+background:#8b5cf6;
+}
+.spec-section{
+background:#fff;
+padding:25px;
+border-radius:16px;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+margin-bottom:40px;
+}
+
+.spec-table{
+width:100%;
+border-collapse:collapse;
+margin-top:10px;
+}
+
+.spec-table th{
+text-align:left;
+padding:12px;
+border-bottom:2px solid #e5e7eb;
+font-weight:600;
+}
+
+.spec-table td{
+padding:12px;
+border-bottom:1px solid #e5e7eb;
+color:#374151;
+}
+
+.add-vehicle{
+background:#fff;
+padding:40px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 6px 16px rgba(0,0,0,0.08);
+}
+
+.add-icon{
+width:60px;
+height:60px;
+border-radius:50%;
+border:2px dashed #cbd5e1;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+margin:auto;
+margin-bottom:10px;
+color:#6b7280;
+}
+
+#vehicleSearch{
+margin-top:15px;
+padding:10px;
+width:320px;
+border-radius:8px;
+border:1px solid #d1d5db;
+}
+
+#searchResults{
+margin-top:15px;
+text-align:left;
+max-width:320px;
+margin-left:auto;
+margin-right:auto;
+}
+.btn-save {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #22c55e;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+}
