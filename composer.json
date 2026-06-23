@@ -1,0 +1,10 @@
+{
+    "require": {
+        "google/apiclient": "2.16"
+    },
+    "config": {
+        "audit": {
+            "block-insecure": false
+        }
+    }
+}
